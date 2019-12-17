@@ -43,7 +43,7 @@ class Turnstile(Producer):
         num_entries = self.turnstile_hardware.get_entries(timestamp, time_step)
 
         key = {
-            "timestamp": self.time_millies()
+            "timestamp": self.time_millis()
         }
 
         value = {

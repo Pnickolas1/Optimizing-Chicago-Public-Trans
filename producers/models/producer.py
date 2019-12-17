@@ -50,7 +50,7 @@ class Producer:
             self.broker_properties,
             default_key_schema=self.key_schema,
             default_value_schema=self.value_schema
-        # )
+        )
 
     def topic_exists(self, client):
         """
