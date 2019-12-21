@@ -47,8 +47,8 @@ class KafkaConsumer:
         else:
             self.consumer = Consumer(self.broker_properties)
 
-        # TODO: Configure the AvroConsumer and subscribe to the topics. Make sure to think about
-        # how the `on_assign` callback should be invoked.
+        logger.info("consumer subscribing to topic '%s'",
+                    self.topic_name_pattern)
         self.consumer.subscribe([self.topic_name_pattern],
                                 on_assign=self.on_assign
                                 )

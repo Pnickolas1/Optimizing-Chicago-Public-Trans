@@ -99,9 +99,6 @@ class Producer:
                 )
                 raise
 
-    def time_millis(self):
-        return int(round(time.time() * 1000))
-
     def close(self):
         """Prepares the producer for exit by cleaning up the producer"""
         if self.producer is None:
